@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Re-Encryption | Secure IoT Data Sharing</title>
+  <style>
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Segoe UI, Arial, sans-serif;
+      background:#f4f6f8;
+      color:#222;
+    }
+    /* Header */
+    header{
+      background:#ffffff;
+      padding:15px 40px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      box-shadow:0 2px 6px rgba(0,0,0,.08);
+    }
+    header h1{
+      margin:0;
+      font-size:26px;
+      color:#c0392b;
+      font-weight:600;
+    }
+    nav a{
+      margin-left:25px;
+      text-decoration:none;
+      color:#333;
+      font-weight:500;
+    }
+    nav a:hover{color:#c0392b}
+
+    /* Hero section (image style) */
+    .hero{
+      position:relative;
+      height:520px;
+      background:linear-gradient(rgba(24, 45, 94, 0.85), rgba(9, 23, 56, 0.85)),
+                 url('https://images.unsplash.com/photo-1535223289827-42f1e9919769') center/cover no-repeat;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#fff;
+    }
+    .hero h2{
+      font-size:40px;
+      max-width:900px;
+      line-height:1.3;
+      font-weight:600;
+    }
+    .hero span{
+      background:#dfe6e9;
+      color:#2d3436;
+      padding:6px 14px;
+      border-radius:4px;
+      font-size:18px;
+      margin-left:8px;
+    }
+
+    /* Sections */
+    section{
+      max-width:1100px;
+      margin:50px auto;
+      background:#fff;
+      padding:40px;
+      border-radius:10px;
+    }
+    section h3{color:#0c1a3a}
+
+    footer{
+      background:#0c1a3a;
+      color:#fff;
+      text-align:center;
+      padding:18px;
+    }
+
+.nav-link {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-link.active {
+  color: white;
+  background-color: #007bff; /* blue */
+  border-radius: 5px;
+}
+
+
+
+  </style>
+  <link rel="stylesheet" href="dataowner.html">
+</head>
+<body>
+
+<header>
+  <h1>Re-Encryption</h1>
+   <nav>
+  <a href="homepage.html" class="nav-link">Home</a>
+  <a href="dataowner.html" class="nav-link">Data Owner</a>
+  <a href="datauser.html" class="nav-link">Data User</a>
+  <a href="talogin.html" class="nav-link">Trusted Authority</a>
+  <a href="proxy.html" class="nav-link">Proxy Server</a>
+  <a href="csp.html" class="nav-link">CSP</a>
+</nav>
+</header>
+
+<section class="hero">
+  <h2>
+    A Proxy Re-Encryption Approach to Secure Data<br/>
+    Sharing in the Internet of Things Based on Blockchain
+  </h2>
+</section>
+
+<section>
+  <h3 style="text-align:center; letter-spacing:2px;">ABSTRACT</h3>
+  <p style="max-width:900px; margin:20px auto; text-align:justify; line-height:1.8;">
+    The evolution of the Internet of Things has seen data sharing as one of its most useful 
+    applications in cloud computing. As eye-catching as this technology has been, data security 
+    remains one of the obstacles it faces since the wrongful use of data leads to several damages.
+     In this article, we propose a proxy re-encryption approach to secure data sharing in cloud environments.
+      Data owners can outsource their encrypted data to the cloud using identity-based encryption, while proxy re-encryption
+      construction will grant legitimate users access to the data. With the Internet of Things devices being resource-constrained,
+       an edge device acts as a proxy server to handle intensive computations. Also, we make use of the features of information-centric 
+       networking to deliver cached content in the proxy effectively, thus improving the quality of service and making good use of the
+       network bandwidth. Further, our system model is based on blockchain, a disruptive technology that enables decentralization in data
+        sharing. It mitigates the bottlenecks in centralized systems and achieves fine-grained access control to data. The security analysis
+         and evaluation of our scheme show the promise of our approach in ensuring data confidentiality, integrity, and security.
+  </p>
+</section>
+<footer>
+  <p>&copy; 2026 Proxy Re-Encryption IoT Blockchain Project</p>
+</footer>
+<script>
+  const currentPage = window.location.pathname.split("/").pop();
+  const links = document.querySelectorAll(".nav-link");
+
+  links.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+  });
+</script>
+</body>
+</html>

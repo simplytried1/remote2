@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaHome</title>
+
+<style>
+
+    *{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Segoe UI, Arial, sans-serif;
+  background:#f4f6f8;
+  color:#222;
+}
+/* Header */
+header{
+  background:#ffffff;
+  padding:15px 40px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+header h1{
+  margin:0;
+  font-size:26px;
+  color:#c0392b;
+  font-weight:600;
+}
+nav a{
+  margin-left:25px;
+  text-decoration:none;
+  color:#333;
+  font-weight:500;
+}
+nav a:hover{color:#c0392b}
+
+/* Hero section */
+.hero{
+  position:relative;
+  height:520px;
+  width:90%;
+  margin:30px auto;
+  background:linear-gradient(rgba(24, 45, 94, 0.85), rgba(9, 25, 61, 0.85)),
+             url('https://images.unsplash.com/photo-1535223289827-42f1e9919769') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+  border-radius:12px;
+}
+.tahpimg{
+    position:relative;
+    height:520px;
+  width:90%;
+   margin:30px auto;
+   display:flex;
+   
+}
+.hero h2{
+  font-size:40px;
+  max-width:900px;
+  line-height:1.3;
+  font-weight:600;
+}
+
+/* Login section */
+.login-section{
+  max-width:1100px;
+  margin:50px auto;
+  background:#fff;
+  padding:40px;
+  border-radius:10px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.login-image img{
+  width:100%;
+}
+
+.login-box h3{
+  text-align:center;
+  margin-bottom:30px;
+  font-weight:500;
+  letter-spacing:1px;
+}
+
+.login-box label{
+  display:block;
+  margin-bottom:6px;
+}
+
+.login-box input{
+  width:100%;
+  padding:10px;
+  margin-bottom:18px;
+  border:1px solid #ccc;
+  border-radius:5px;
+}
+
+.btn-group{
+  display:flex;
+  gap:15px;
+}
+
+.btn-login{
+  background:#27ae60;
+  border:none;
+  color:#fff;
+  padding:10px 20px;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+.btn-register{
+  background:#2980b9;
+  border:none;
+  color:#fff;
+  padding:10px 20px;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+footer{
+  background:#0c1a3a;
+  color:#fff;
+  text-align:center;
+  padding:18px;
+  margin-top:40px;
+}
+
+@media(max-width:800px){
+  .login-section{
+    grid-template-columns:1fr;
+  }
+}
+
+    .nav-link {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-link.active {
+  color: white;
+  background-color: #007bff; /* blue */
+  border-radius: 5px;
+}
+</style>
+</head>
+
+<body>
+    <header>
+  <h1>Re-Encryption</h1>
+    <nav>
+  <a href="tahome.html" class="nav-link">Home</a>
+  <a href="tadataowners.html" class="nav-link">Data Owners</a>
+  <a href="tadatausers.html" class="nav-link">Data Users</a>
+  <a href="tarequestedfiles.html" class="nav-link">Requestedfiles</a>
+  <a href="../talogin.html" class="nav-link"  onclick="logout()" target="_blank">Logout</a>
+</nav>
+
+<script>
+function logout() {
+    sessionStorage.clear();
+    localStorage.clear();
+    window.location.replace("../talogin.html");
+}
+</script>
+
+</header>
+<section class="hero">
+  <h2>A Proxy Re-Encryption Approach to Secure Data<br/>
+    Sharing in the Internet of Things Based on Blockchain</h2>
+</section>
+
+
+<h1><center>Wellcome To Trusted Authority</center></h1>
+
+<div class="thimg">
+    <center><img src="https://static.vecteezy.com/system/resources/previews/020/348/555/non_2x/trustworthy-icon-vector.jpg" alt="Trusted authority image"></center>
+</div>
+
+
+
+<script>
+  const currentPage = window.location.pathname.split("/").pop();
+  const links = document.querySelectorAll(".nav-link");
+
+  links.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+  });
+</script>
+</body>
+</html>
